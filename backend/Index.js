@@ -16,22 +16,24 @@ const app = express();
 app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(session({
-	secret: process.env.SEGREDO,
-	resave: false,
-	saveUninitialized: true,
-	maxAge: 1000*60*60,
-}));
+app.use(
+  session({
+    secret: process.env.SEGREDO,
+    resave: false,
+    saveUninitialized: true,
+    maxAge: 1000 * 60 * 60,
+  })
+);
 
 // Rotas para o servidor
 app.use('/login', rotaLogin);
-app.use('/agencia', /*verificarAcesso, */rotaAgencia);
-app.use('/usuario', /* verificarAcesso,  */rotaUsuario);
-app.use('/produto', /* verificarAcesso,  */rotaProduto);
+app.use('/agencia', /*verificarAcesso, */ rotaAgencia);
+app.use('/usuario', /* verificarAcesso,  */ rotaUsuario);
+app.use('/produto', /* verificarAcesso,  */ rotaProduto);
 
 // Inicialização do servidor
 const host = '0.0.0.0';
 const porta = '4000';
 app.listen(porta, host, () => {
-	console.log('Servidor escutando na porta '+ host +':'+ porta);
+  console.log('Servidor escutando na porta ' + host + ':' + porta);
 });

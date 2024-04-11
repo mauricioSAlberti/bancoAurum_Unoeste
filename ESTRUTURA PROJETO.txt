@@ -1,0 +1,54 @@
+AGENCIA
+    #cod_ag
+    #endereco
+    #cidade
+    #uf
+    #telefone
+    #produtos
+
+USUÁRIO
+    #cod_cli;
+    #nome;
+    #cpf;
+    #rg
+    #dataNasc;
+    #endereco;
+    #cidade;
+    #uf;
+    #telefone;
+    #tipo;
+    #email;
+    #senha;
+    #agencia
+    #produtos;
+	
+PRODUTO
+    #cod_prod
+    #descricao
+
+ALTERAÇÕES NA ESTRUTURA
+	dados
+		dados.js OK
+		mockAgencias.js OK
+		mockClientes.js	OK
+		mockProdutos.js	OK
+	tabelas
+		TelaExibirAgencias	OK
+		TelaExibirUsuarios	OK
+		TelaExibirProdutos	OK
+	telas
+		Tela404.jsx		OK
+		TelaInicial		OK		
+		TelaLogin		FAZER
+		TelaCadastrarAgencia	~OK	
+		TelaCadastrarUsuario	~OK
+		TelaCadastrarProduto	OK
+		TelaAlterarAgencia
+		TelaAlterarCliente
+		TelaAlterarProduto
+		TelaContratarProduto
+		TelaAssociarProdutoAgencia
+
+
+MDTR-127 55065666
+banner ta errado, 
