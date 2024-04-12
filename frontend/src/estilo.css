@@ -1,0 +1,13 @@
+/* Dropdown de 'Agências', 'Usuários' e 'Produtos' em Home */
+.button-group {
+  display: flex;
+  justify-content: center;
+  height: 15vh;
+}
+.dropdown {
+  margin: 10px;
+}
+.dropdown-toggle {
+  background-color: #052c65;
+  color: #cfe2ff;
+}

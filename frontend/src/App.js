@@ -7,6 +7,7 @@ import Tela404 from './telas/Tela404.jsx';
 import TelaCadastrarAgencia from './telas/TelaCadastrarAgencia';
 import TelaCadastrarUsuario from './telas/TelaCadastrarUsuario';
 import TelaCadastrarProduto from './telas/TelaCadastrarProduto';
+import TelaCadastrarProdAg from './telas/TelaCadastrarProdutoAgencia.jsx';
 
 export const ContextoUsuario = createContext('');
 
@@ -33,6 +34,8 @@ function App() {
               <Route path='/cadastraragencia' element={<TelaCadastrarAgencia />} />
               <Route path='/cadastrarusuario' element={<TelaCadastrarUsuario />} />
               <Route path='/cadastrarproduto' element={<TelaCadastrarProduto />} />
+              <Route path='/produtoagencia' element={<TelaCadastrarProdAg />} />
+
               <Route path='*' element={<Tela404 />} />
             </Routes>
           </BrowserRouter>

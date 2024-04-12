@@ -1,30 +1,33 @@
-import { Container, Nav, NavDropdown, Navbar } from 'react-bootstrap';
+import { Dropdown, ButtonGroup } from 'react-bootstrap';
+import '../estilo.css';
 
 export default function Menu() {
   return (
-    <Navbar className='m-2' bg='light' expand='lg'>
-      <Container className='m-0'>
-        <Navbar.Brand href='/'>HOME</Navbar.Brand>
-        <Navbar.Toggle aria-controls='basic-navbar-nav' />
-        <Navbar.Collapse id='basic-navbar-nav'>
-          <Nav className='me-auto'>
-            <NavDropdown title='AGÊNCIAS' id='basic-nav-dropdown'>
-              <NavDropdown.Item href='/cadastraragencia'>Cadastrar agência</NavDropdown.Item>
-              <NavDropdown.Item href='/exibiragencias'>Exibir agências</NavDropdown.Item>
-              {/* <NavDropdown.Item href='/alteraragencia'>Alterar agência</NavDropdown.Item> */}
-              {/* <NavDropdown.Item href='/excluiragencia'>Excluir agência</NavDropdown.Item> */}
-            </NavDropdown>
-            <NavDropdown title='USUÁRIOS' id='basic-nav-dropdown'>
-              <NavDropdown.Item href='/cadastrarusuario'>Cadastrar usuário</NavDropdown.Item>
-              <NavDropdown.Item href='/exibirusuarios'>Exibir usuário</NavDropdown.Item>
-            </NavDropdown>
-            <NavDropdown title='PRODUTOS' id='basic-nav-dropdown'>
-              <NavDropdown.Item href='/cadastrarproduto'>Cadastrar produto</NavDropdown.Item>
-              <NavDropdown.Item href='/exibirprodutos'>Exibir produtos</NavDropdown.Item>
-            </NavDropdown>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+    <ButtonGroup className='d-flex justify-content-center'>
+      <Dropdown>
+        <Dropdown.Toggle variant='light'>AGÊNCIAS</Dropdown.Toggle>
+        <Dropdown.Menu>
+          <Dropdown.Item href='/cadastraragencia'>Cadastrar agência</Dropdown.Item>
+          <Dropdown.Item href='/exibiragencias'>Exibir agências</Dropdown.Item>
+          <Dropdown.Item href='/produtoagencia'>Cadastrar produto em agência</Dropdown.Item>
+        </Dropdown.Menu>
+      </Dropdown>
+      <Dropdown>
+        <Dropdown.Toggle variant='light'>USUÁRIOS</Dropdown.Toggle>
+        <Dropdown.Menu>
+          <Dropdown.Item href='/cadastrarusuario'>Cadastrar usuário</Dropdown.Item>
+          <Dropdown.Item href='/exibirusuarios'>Exibir usuários</Dropdown.Item>
+          <Dropdown.Item href='/produtousuario'>Contratar produto para usuário</Dropdown.Item>
+        </Dropdown.Menu>
+      </Dropdown>
+      <Dropdown>
+        <Dropdown.Toggle variant='light'>PRODUTOS</Dropdown.Toggle>
+        <Dropdown.Menu>
+          <Dropdown.Item href='/cadastrarproduto'>Cadastrar produto</Dropdown.Item>
+          <Dropdown.Item href='/exibirprodutos'>Exibir produtos</Dropdown.Item>
+        </Dropdown.Menu>
+      </Dropdown>
+    </ButtonGroup>
+    // </div>
   );
 }

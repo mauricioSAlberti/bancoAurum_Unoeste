@@ -3,6 +3,8 @@ import Pagina from '../templates/Pagina';
 import { LinkContainer } from 'react-router-bootstrap';
 import { useEffect, useState } from 'react';
 import { hostname, port } from '../dados/dados';
+// SUBSTITUTO DE listaAgencias QUANDO NÃO HÁ BACKEND
+import mockAgencias from '../dados/mockAgencias';
 
 const urlUsuario = `http://${hostname}:${port}/usuario`;
 const urlAgencia = `http://${hostname}:${port}/agencia`;
@@ -197,7 +199,7 @@ export default function TelaCadastrarUsuario(props) {
               <Form.Group className='mb-3' style={{ width: '120px' }}>
                 <Form.Label>Agência:</Form.Label>
                 <select onChange={manipularMudanca} value={usuario.cod_ag} id='cod_ag'>
-                  {listaAgencias.map((agencia) => (
+                  {mockAgencias.map((agencia) => (
                     <option key={agencia.cod_ag} value={agencia.cod_ag}>
                       Código: {agencia.cod_ag} | Cidade: {agencia.cidade} | UF: {agencia.uf}
                     </option>
